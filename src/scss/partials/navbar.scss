@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap');
+
+$orangeColor: #c18656;
+
+@mixin flexEvenly() {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hamburger {
+    display: none;
+
+
+}
+
+nav {
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+    @include flexEvenly();
+    min-height: 105px;
+    font-size: 14px;
+    color: white;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    .left-side {
+        margin-left: 30px;
+    }
+
+    .center {
+        width: 10%;
+        height: 70%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+    }
+
+    div {
+        width: 30%;
+        text-align: center;
+
+        ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+
+            a {
+                text-decoration: none;
+            }
+
+            li {
+                color: $orangeColor;
+                font-weight: 700;
+                list-style: none;
+                margin: 0 0.5em;
+                transition: background-color 0.3s ease;
+                padding: 2px;
+            }
+
+            li:hover {
+                color: black;
+                background-color: $orangeColor;
+                cursor: pointer;
+            }
+
+            li:active {
+                background-color: red;
+                color: black;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .center {
+        align-self: center;
+    }
+
+    .loged-right-side {
+        display: flex;
+
+        a {
+            text-decoration: none;
+
+        }
+
+        li {
+            list-style: none;
+            color: #b07644;
+            margin: 1em;
+
+        }
+
+        li:hover {
+            color: black;
+            background-color: $orangeColor;
+            cursor: pointer;
+        }
+
+        button {
+            background-color: transparent;
+            color: red;
+            border: none;
+            margin: 1em;
+            margin-top: 0.5em;
+            padding: 8px 16px;
+        }
+
+        button:hover {
+            color: #ffb1b1;
+        }
+    }
+}
+
+//from here authentificaion
+.wrapperAuth {
+    border: 1px #b07644 solid;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30%;
+    min-height: 280px;
+    min-width: 200px;
+    background-color: white;
+    margin: 0;
+    padding: 30px 30px;
+}
+
+.wrapperAuth form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapperAuth form div {
+    margin: 0.6em;
+    width: 100%;
+    text-align: center;
+}
+
+.wrapperAuth form div button {
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    background-color: #b07644;
+    width: 100%;
+    margin-top: 1em;
+}
+
+.wrapperAuth form div button:hover {
+    background-color: $orangeColor;
+}
+
+.wrapperAuth form div input {
+    width: 90%;
+    height: 35px;
+    border: none;
+    border-bottom: 1px solid $orangeColor;
+}
+
+.wrapperAuth form div input:focus {
+    outline: none;
+}
+
+.wrapperAuth form .link {
+    color: black;
+}
+
+.wrapperAuth form .link span {
+    color: blue;
+}
+
+.closeButton {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 8px;
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    border-radius: 50%;
+}
+
+.closeButton:hover {
+    background-color: rgb(255, 152, 152);
+}
+
+.sidebar {
+    display: none;
+    position: absolute;
+    width: 140px;
+    left: -35px;
+    background-color: white;
+    border: #b07644 1px solid;
+
+    nav {
+        display: flex;
+        flex-direction: column;
+
+        /*      .wrapperAuth {
+            border: 1px #b07644 solid;
+            left: 50%;
+            min-width: 400px;
+            min-height: 280px;
+            background-color: white;
+            margin: 0;
+            border-radius: 12px;
+            padding: 30px 30px;
+        } */
+
+        .center {
+            width: 100%;
+
+            img {
+                width: 50px;
+                height: 50px;
+
+            }
+        }
+
+        ul {
+            font-size: 14px;
+            width: 100%;
+
+
+            li {
+                list-style: none;
+                margin: 8px 16px;
+                color: #c18656;
+                text-align: center;
+
+            }
+
+            li:hover {
+                color: black;
+                background-color: $orangeColor;
+                cursor: pointer;
+            }
+
+            a {
+                font-size: 14px;
+                text-decoration: none;
+
+            }
+        }
+    }
+
+    .downer-side {
+        width: 100%;
+        margin-top: -5px;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+
+            li {
+                margin: 0;
+            }
+        }
+    }
+
+    .loged-downer-side {
+        a {
+            text-decoration: none;
+        }
+
+        li {
+            list-style: none;
+            color: #b07644;
+
+        }
+
+        button {
+            background-color: white;
+            color: red;
+            border: none;
+            margin: 0.5em;
+        }
+
+        button:hover {
+            color: #ffb1b1;
+        }
+    }
+}
+
+
+.nonvisible {
+    display: none;
+    border: none;
+}
+
+@media screen and (max-width: 640px) {
+    nav {
+
+        font-size: 12px;
+
+        .left-side {
+            margin-left: 40px;
+            color: aqua;
+        }
+
+        .right-side {
+            margin-right: 30px;
+
+            li {
+                min-width: 48px;
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+
+
+    .wrapperAuth {
+        top: 0%;
+        left: 171%;
+
+    }
+
+    .hamburger {
+        padding: 10px 20px;
+        display: block;
+        text-align: right;
+
+        i {
+            transform: scale(2);
+            color: white;
+        }
+    }
+
+    .sidebar {
+        display: block;
+
+    }
+
+    nav {
+        display: none;
+    }
+}

@@ -1,0 +1,283 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap");
+.hamburger {
+  display: none;
+}
+
+nav {
+  position: relative;
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 105px;
+  font-size: 14px;
+  color: white;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+nav .left-side {
+  margin-left: 30px;
+}
+nav .center {
+  width: 10%;
+  height: 70%;
+}
+nav .center img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+nav div {
+  width: 30%;
+  text-align: center;
+}
+nav div ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+nav div ul a {
+  text-decoration: none;
+}
+nav div ul li {
+  color: #c18656;
+  font-weight: 700;
+  list-style: none;
+  margin: 0 0.5em;
+  transition: background-color 0.3s ease;
+  padding: 2px;
+}
+nav div ul li:hover {
+  color: black;
+  background-color: #c18656;
+  cursor: pointer;
+}
+nav div ul li:active {
+  background-color: red;
+  color: black;
+  cursor: pointer;
+}
+nav .center {
+  align-self: center;
+}
+nav .loged-right-side {
+  display: flex;
+}
+nav .loged-right-side a {
+  text-decoration: none;
+}
+nav .loged-right-side li {
+  list-style: none;
+  color: #b07644;
+  margin: 1em;
+}
+nav .loged-right-side li:hover {
+  color: black;
+  background-color: #c18656;
+  cursor: pointer;
+}
+nav .loged-right-side button {
+  background-color: transparent;
+  color: red;
+  border: none;
+  margin: 1em;
+  margin-top: 0.5em;
+  padding: 8px 16px;
+}
+nav .loged-right-side button:hover {
+  color: #ffb1b1;
+}
+
+.wrapperAuth {
+  border: 1px #b07644 solid;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30%;
+  min-height: 280px;
+  min-width: 200px;
+  background-color: white;
+  margin: 0;
+  padding: 30px 30px;
+}
+
+.wrapperAuth form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapperAuth form div {
+  margin: 0.6em;
+  width: 100%;
+  text-align: center;
+}
+
+.wrapperAuth form div button {
+  padding: 10px 20px;
+  border: none;
+  color: white;
+  background-color: #b07644;
+  width: 100%;
+  margin-top: 1em;
+}
+
+.wrapperAuth form div button:hover {
+  background-color: #c18656;
+}
+
+.wrapperAuth form div input {
+  width: 90%;
+  height: 35px;
+  border: none;
+  border-bottom: 1px solid #c18656;
+}
+
+.wrapperAuth form div input:focus {
+  outline: none;
+}
+
+.wrapperAuth form .link {
+  color: black;
+}
+
+.wrapperAuth form .link span {
+  color: blue;
+}
+
+.closeButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 8px;
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  border-radius: 50%;
+}
+
+.closeButton:hover {
+  background-color: rgb(255, 152, 152);
+}
+
+.sidebar {
+  display: none;
+  position: absolute;
+  width: 140px;
+  left: -35px;
+  background-color: white;
+  border: #b07644 1px solid;
+}
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  /*      .wrapperAuth {
+      border: 1px #b07644 solid;
+      left: 50%;
+      min-width: 400px;
+      min-height: 280px;
+      background-color: white;
+      margin: 0;
+      border-radius: 12px;
+      padding: 30px 30px;
+  } */
+}
+.sidebar nav .center {
+  width: 100%;
+}
+.sidebar nav .center img {
+  width: 50px;
+  height: 50px;
+}
+.sidebar nav ul {
+  font-size: 14px;
+  width: 100%;
+}
+.sidebar nav ul li {
+  list-style: none;
+  margin: 8px 16px;
+  color: #c18656;
+  text-align: center;
+}
+.sidebar nav ul li:hover {
+  color: black;
+  background-color: #c18656;
+  cursor: pointer;
+}
+.sidebar nav ul a {
+  font-size: 14px;
+  text-decoration: none;
+}
+.sidebar .downer-side {
+  width: 100%;
+  margin-top: -5px;
+}
+.sidebar .downer-side ul {
+  display: flex;
+  flex-direction: column;
+}
+.sidebar .downer-side ul li {
+  margin: 0;
+}
+.sidebar .loged-downer-side a {
+  text-decoration: none;
+}
+.sidebar .loged-downer-side li {
+  list-style: none;
+  color: #b07644;
+}
+.sidebar .loged-downer-side button {
+  background-color: white;
+  color: red;
+  border: none;
+  margin: 0.5em;
+}
+.sidebar .loged-downer-side button:hover {
+  color: #ffb1b1;
+}
+
+.nonvisible {
+  display: none;
+  border: none;
+}
+
+@media screen and (max-width: 640px) {
+  nav {
+    font-size: 12px;
+  }
+  nav .left-side {
+    margin-left: 40px;
+    color: aqua;
+  }
+  nav .right-side {
+    margin-right: 30px;
+  }
+  nav .right-side li {
+    min-width: 48px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .wrapperAuth {
+    top: 0%;
+    left: 171%;
+  }
+  .hamburger {
+    padding: 10px 20px;
+    display: block;
+    text-align: right;
+  }
+  .hamburger i {
+    transform: scale(2);
+    color: white;
+  }
+  .sidebar {
+    display: block;
+  }
+  nav {
+    display: none;
+  }
+}/*# sourceMappingURL=navbar.css.map */

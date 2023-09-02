@@ -1,0 +1,102 @@
+.contactUs {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.contactUs .title {
+  color: white;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contactUs .contactInformation {
+  display: flex;
+  background-color: white;
+  flex: 1;
+}
+.contactUs .contactInformation .social {
+  width: 50%;
+  background-color: #fdf6ee;
+  display: flex;
+  flex-direction: column;
+}
+.contactUs .contactInformation .social .androidApps {
+  display: flex;
+  flex-direction: row !important;
+}
+.contactUs .contactInformation .social .androidApps div {
+  margin: 5px;
+}
+.contactUs .contactInformation .social > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.contactUs .contactInformation .social > div h4 {
+  text-align: center;
+}
+.contactUs .contactInformation .form {
+  width: 50%;
+  padding: 3em 1em;
+  font-weight: 600;
+}
+.contactUs .contactInformation .form input {
+  width: 200px;
+  height: 22px;
+  background-color: #fafafa;
+}
+.contactUs .contactInformation .form .message .inputMessage {
+  width: 200px;
+  height: 200px;
+}
+@media screen and (max-width: 450px) {
+  .contactUs .contactInformation .form .message .inputMessage {
+    width: 140px;
+  }
+}
+.contactUs .contactInformation .form div {
+  display: flex;
+  flex-direction: column;
+}
+.contactUs .contactInformation .form .fullName {
+  flex-direction: row;
+}
+.contactUs .contactInformation .form .fullName div {
+  margin-right: 5px;
+}
+.contactUs .contactInformation .form .order {
+  display: block;
+  margin: 10px 0;
+}
+.contactUs .contactInformation .form .order button {
+  background-color: #c18656;
+  padding: 6px 12px;
+  border: none;
+  color: white;
+  transition: 0.3s ease background-color;
+}
+.contactUs .contactInformation .form .order button:hover {
+  background-color: #dbb18a;
+}
+
+@media screen and (max-width: 870px) {
+  .fullName {
+    display: flex;
+    flex-direction: column !important;
+  }
+  .fullName input {
+    width: 130px !important;
+  }
+  .adress input {
+    width: 130px !important;
+  }
+}
+/* @media screen and (max-width: 450px) {
+
+    .inputMessage {
+        width: 140px !important;
+    }
+} *//*# sourceMappingURL=contact.css.map */

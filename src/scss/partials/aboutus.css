@@ -1,0 +1,65 @@
+.about {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  /*  overflow-y: hidden; */
+}
+.about .title {
+  height: 40%;
+  max-height: 205px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about .title h1 {
+  text-align: center;
+  font-size: 70px;
+}
+.about .content {
+  flex: 1;
+  display: flex;
+  background-image: url("../../images/aboutus.jpg");
+}
+.about .content .left {
+  flex: 1;
+}
+.about .content .left p {
+  color: "black";
+  padding: 40px 80px;
+  font-weight: 600;
+}
+.about .content .right {
+  flex: 2;
+  padding: 40px 0;
+  padding-left: 15px;
+  padding-right: 85px;
+  color: "black";
+  font-size: 14px;
+}
+.about .content .right h4 {
+  font-size: 18px;
+  margin-bottom: 35px;
+  color: #c18656;
+  font-weight: 700;
+}
+.about .content .right p:nth-child(2) {
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 470px) {
+  .about {
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+  }
+  .content {
+    flex-direction: column;
+    overflow-x: hidden;
+    flex: 1;
+  }
+  .right {
+    padding: 0 !important;
+    min-width: 150px;
+  }
+}/*# sourceMappingURL=aboutus.css.map */

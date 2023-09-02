@@ -1,0 +1,121 @@
+@mixin flexColumn() {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrappCalendar {
+    @include flexColumn();
+
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+
+    .calendar {
+        @include flexColumn();
+        border: 1px solid #ccc;
+        width: 400px;
+        margin: 0 auto;
+    }
+
+    .header {
+        text-align: center;
+        font-weight: bold;
+        padding: 10px;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+
+        .month {
+            display: flex;
+            align-items: center;
+        }
+
+        .changeMonth {
+            padding: 10px;
+            color: #c18656;
+            border: none;
+        }
+    }
+
+    .weekdays {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        color: white;
+    }
+
+    .weekday {
+        flex: 1;
+        text-align: center;
+    }
+
+    .days {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 1px;
+        background-color: #fff;
+    }
+
+    .day {
+        @include flexColumn();
+        justify-content: flex-start;
+        align-items: center;
+        padding: 5px;
+        border: 1px solid #ccc;
+    }
+
+    /*   .selected-day {
+        background-color: #c18656;
+        color: #fff;
+    }
+ */
+    .chosenDate {
+        margin-top: 1em;
+
+        h2 {
+            text-align: center;
+            color: white;
+        }
+
+        input {
+            height: 20px;
+            margin: 0.2em;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        .credentials {
+            margin: 0.5em;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .finalDate {
+            display: flex;
+            justify-content: center;
+
+            p {
+                margin: 0.2em;
+            }
+        }
+
+        .choseDateButton {
+            text-align: center;
+
+            button {
+                background-color: #c18656;
+                padding: 6px 12px;
+                border: none;
+                color: white;
+                transition: 0.3s ease background-color;
+                margin: 0.3em;
+            }
+
+            button:hover {
+                background-color: #dbb18a;
+            }
+        }
+    }
+}

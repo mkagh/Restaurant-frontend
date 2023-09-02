@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap");
+.wrapper {
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper .welcome {
+  width: 55%;
+  height: 200px;
+  margin: auto;
+  text-align: center;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+}
+.wrapper .welcome h1 {
+  margin: 15px 0;
+  font-size: 60px;
+}
+.wrapper .welcome p {
+  margin: 15px 0;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+.wrapper .welcome button {
+  font-size: 15px;
+  padding: 10px 20px;
+  color: white;
+  background-color: #b07644;
+  border: none;
+}
+.wrapper .welcome button:hover {
+  transition: background-color 0.3s ease;
+  background-color: #c48951;
+}
+
+@media screen and (max-width: 500px) {
+  .welcome h1 {
+    font-size: 35px !important;
+  }
+  .welcome p {
+    font-size: 14px !important;
+  }
+}/*# sourceMappingURL=home.css.map */

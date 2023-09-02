@@ -1,0 +1,18 @@
+.singleItem {
+  color: white;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.singleItem .restOfData {
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 4em;
+}
+.singleItem * {
+  margin: 1em;
+}/*# sourceMappingURL=singleItem.css.map */

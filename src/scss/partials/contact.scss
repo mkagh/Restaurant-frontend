@@ -1,0 +1,139 @@
+@mixin flexEvenly() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin columnFlex() {
+    display: flex;
+    flex-direction: column;
+}
+
+.contactUs {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    .title {
+        color: white;
+        height: 80px;
+        @include flexEvenly();
+    }
+
+    .contactInformation {
+        display: flex;
+        background-color: white;
+        flex: 1;
+
+        .social {
+            width: 50%;
+            background-color: #fdf6ee;
+            @include columnFlex();
+
+            .androidApps {
+                display: flex;
+                flex-direction: row !important;
+
+                div {
+                    margin: 5px;
+                }
+            }
+
+            &>div {
+                flex: 1;
+                @include columnFlex();
+                align-items: center;
+                justify-content: center;
+
+                h4 {
+                    text-align: center;
+                }
+            }
+        }
+
+        .form {
+            width: 50%;
+            padding: 3em 1em;
+            font-weight: 600;
+
+            input {
+                width: 200px;
+                height: 22px;
+                background-color: #fafafa;
+            }
+
+            .message {
+                .inputMessage {
+                    width: 200px;
+                    height: 200px
+                }
+
+                @media screen and (max-width: 450px) {
+
+                    .inputMessage {
+                        width: 140px;
+                    }
+                }
+            }
+
+            div {
+                @include columnFlex();
+            }
+
+            .fullName {
+                flex-direction: row;
+
+                div {
+                    margin-right: 5px;
+                }
+            }
+
+            .order {
+                display: block;
+                margin: 10px 0;
+
+                button {
+                    background-color: #c18656;
+                    padding: 6px 12px;
+                    border: none;
+                    color: white;
+                    transition: 0.3s ease background-color;
+                }
+
+                button:hover {
+                    background-color: #dbb18a;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 870px) {
+
+
+    .fullName {
+        display: flex;
+        flex-direction: column !important;
+
+        input {
+            width: 130px !important;
+        }
+
+    }
+
+
+
+    .adress {
+        input {
+
+            width: 130px !important;
+        }
+    }
+}
+
+/* @media screen and (max-width: 450px) {
+
+    .inputMessage {
+        width: 140px !important;
+    }
+} */

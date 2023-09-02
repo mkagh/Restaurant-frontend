@@ -1,0 +1,77 @@
+$blackColor: "black";
+
+.about {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    /*  overflow-y: hidden; */
+
+    .title {
+        height: 40%;
+        max-height: 205px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+            text-align: center;
+            font-size: 70px;
+        }
+    }
+
+    .content {
+        flex: 1;
+        display: flex;
+        background-image: url("../../images/aboutus.jpg");
+
+        .left {
+            flex: 1;
+
+            p {
+                color: $blackColor;
+                padding: 40px 80px;
+                font-weight: 600;
+            }
+        }
+
+        .right {
+            flex: 2;
+            padding: 40px 0;
+            padding-left: 15px;
+            padding-right: 85px;
+            color: $blackColor;
+            font-size: 14px;
+
+            h4 {
+                font-size: 18px;
+                margin-bottom: 35px;
+                color: #c18656;
+                font-weight: 700;
+            }
+
+            p:nth-child(2) {
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .about {
+        min-width: 320px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content {
+        flex-direction: column;
+        overflow-x: hidden;
+        flex: 1;
+    }
+
+    .right {
+        padding: 0 !important;
+        min-width: 150px;
+    }
+}

@@ -1,0 +1,32 @@
+@import './partials/navbar.css';
+@import './partials/home.css';
+@import './partials/aboutus.css';
+@import './partials/contact.css';
+@import './partials/menu.css';
+@import './partials/orderOnline.css';
+@import './partials/memberOrder.css';
+@import './partials/singleItem.css';
+@import './partials/calendar.css';
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: url("../images/restaurant.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.App .error {
+  color: red;
+}/*# sourceMappingURL=style.css.map */

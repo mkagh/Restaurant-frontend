@@ -1,0 +1,100 @@
+.wrappCalendar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  /*   .selected-day {
+         background-color: #c18656;
+         color: #fff;
+     }
+  */
+}
+.wrappCalendar .calendar {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  width: 400px;
+  margin: 0 auto;
+}
+.wrappCalendar .header {
+  text-align: center;
+  font-weight: bold;
+  padding: 10px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+.wrappCalendar .header .month {
+  display: flex;
+  align-items: center;
+}
+.wrappCalendar .header .changeMonth {
+  padding: 10px;
+  color: #c18656;
+  border: none;
+}
+.wrappCalendar .weekdays {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  color: white;
+}
+.wrappCalendar .weekday {
+  flex: 1;
+  text-align: center;
+}
+.wrappCalendar .days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1px;
+  background-color: #fff;
+}
+.wrappCalendar .day {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 5px;
+  border: 1px solid #ccc;
+}
+.wrappCalendar .chosenDate {
+  margin-top: 1em;
+}
+.wrappCalendar .chosenDate h2 {
+  text-align: center;
+  color: white;
+}
+.wrappCalendar .chosenDate input {
+  height: 20px;
+  margin: 0.2em;
+}
+.wrappCalendar .chosenDate p {
+  text-align: center;
+}
+.wrappCalendar .chosenDate .credentials {
+  margin: 0.5em;
+  display: flex;
+  flex-direction: column;
+}
+.wrappCalendar .chosenDate .finalDate {
+  display: flex;
+  justify-content: center;
+}
+.wrappCalendar .chosenDate .finalDate p {
+  margin: 0.2em;
+}
+.wrappCalendar .chosenDate .choseDateButton {
+  text-align: center;
+}
+.wrappCalendar .chosenDate .choseDateButton button {
+  background-color: #c18656;
+  padding: 6px 12px;
+  border: none;
+  color: white;
+  transition: 0.3s ease background-color;
+  margin: 0.3em;
+}
+.wrappCalendar .chosenDate .choseDateButton button:hover {
+  background-color: #dbb18a;
+}/*# sourceMappingURL=calendar.css.map */

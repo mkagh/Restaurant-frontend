@@ -1,0 +1,133 @@
+@mixin hoverButton() {
+    transition: background-color 0.3s ease;
+    background-color: #dbb18a;
+}
+
+.menuWrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    .search {
+        color: white;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+
+        input {
+            width: 200px;
+            height: 32px;
+            border-radius: 12px;
+            outline: #c18656;
+        }
+    }
+
+    .choseCategory {
+        height: 33px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+
+        .button {
+            margin: 0.3em;
+
+            button {
+                padding: 7px 14px;
+                background-color: #c18656;
+                color: white;
+                border: none;
+                border-radius: 32px;
+
+                &:hover {
+                    @include hoverButton()
+                }
+            }
+        }
+    }
+
+    .itemsWrapper {
+        flex: 1;
+        padding: 50px 70px;
+        background-color: #fdf6ee;
+
+        .items {
+            color: black;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+
+
+            .oneItem {
+                width: 40%;
+                max-height: 60px;
+                border-top: 1px solid black;
+                display: flex;
+                justify-content: space-between;
+                padding-bottom: 15px;
+                padding-top: 10px;
+
+                h3 {
+                    color: #c18656;
+                }
+
+                p {
+                    color: #6ba9a2;
+                    padding-top: 8px;
+                }
+
+                button {
+                    color: rgb(91, 143, 13);
+                    border: none;
+                    background-color: #fdf6ee;
+
+                    &:hover {
+                        transition: background-color 0.3s ease;
+                        color: rgb(191, 221, 147);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 440px) {
+    .menuWrapper {
+        //potrebno je dodati sve parente
+
+        .itemsWrapper {
+
+            .items {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                width: 100%;
+
+
+                .oneItem {
+                    padding: 10px 10px;
+                    min-width: 100%;
+                }
+
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .menuWrapper {
+        .choseCategory {
+            .button {
+
+                button {
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+}
