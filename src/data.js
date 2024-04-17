@@ -13,8 +13,6 @@ import Icecream from './images/icecream.jpg'
 import Tart from './images/tart.jpg'
 import Cheesecake from './images/cheesecake.jpg'
 
-
-
 const months = [
     'January',
     'February',
@@ -36,9 +34,7 @@ const years = [
     '2026',
     '2027',
     '2028'
-
 ]
-
 
 const items = [
     {
@@ -171,7 +167,4 @@ const items = [
 ];
 
 export default items;
-
-
-
 export { months, years, items }

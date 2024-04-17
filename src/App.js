@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from "./pages/Home";
@@ -15,12 +14,10 @@ import './scss/style.css';
 import { useGlobalContext } from './context'
 import { useLocation } from 'react-router-dom'
 
-
 const allCategories = ['All', ...new Set(items.map((item) => item.category))];
 
 function App() {
   const { clearOrder, clearError } = useGlobalContext()
-
   const { pathname } = useLocation()
 
   useEffect(() => {
@@ -44,9 +41,7 @@ function App() {
   const searchFilter = (searchedValue) => {
     const searchedItems = items.filter((item) => item.name.includes(searchedValue));
     setMenuItems(searchedItems)
-
   }
-
   return (
     <div className="App">
       <Navbar />

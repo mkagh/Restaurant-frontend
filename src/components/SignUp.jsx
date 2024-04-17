@@ -3,7 +3,6 @@ import { useGlobalContext } from '../context'
 import Cookies from 'js-cookie';
 import axios from "axios"
 
-
 const SignUp = () => {
     const { isSignUp, dontShowSignup, loggedSigned, signError, assignSignError } = useGlobalContext()
     const [formData, setFormData] = useState({
@@ -11,7 +10,7 @@ const SignUp = () => {
         email: '',
         password: '',
         confirmPassword: ''
-    });
+    }); 
 
     useEffect(() => {
         const userDataCookie = Cookies.get('userData');
@@ -31,12 +30,10 @@ const SignUp = () => {
             }
             else {
                 assignSignError(response.data.msg)
-
             }
         } catch {
-            console.log("ne valja nesto");
+            console.log("something went wrong");
         }
-
     };
 
     const handleInputChange = (event) => {
@@ -48,9 +45,7 @@ const SignUp = () => {
             };
         });
     };
-
     return (
-
         <div className={isSignUp ? 'wrapperAuth ' : 'nonvisible'}>
             <form onSubmit={handleFormSubmit} className="registrationForm" /* action="/register" */ method="POST" >
                 <div className="username">

@@ -3,7 +3,6 @@ import axios from "axios"
 import Cookies from 'js-cookie';
 import { useGlobalContext } from '../context'
 
-
 const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
 const Calendar = () => {
@@ -27,12 +26,10 @@ const Calendar = () => {
             try {
                 const reserved = await axios.get(`/api/v1/reservations`, { params: date });
                 if (reserved.data.reservation.length > 1) {
-
                     setIsDateFree(false)
                     buttonRef.current.disabled = true
                 }
                 else {
-                    console.log('disable')
                     setIsDateFree(true)
                     buttonRef.current.disabled = false
                 }
@@ -43,9 +40,7 @@ const Calendar = () => {
         fetchData();
     }, [date]);
 
-
     const [selectedDate, setSelectedDate] = useState(new Date());
-
     const year = selectedDate.getFullYear();
     const month = selectedDate.getMonth();
     const daysInMonth = new Date(year, month + 1, 0).getDate();
@@ -53,20 +48,16 @@ const Calendar = () => {
 
     const generateCalendarDays = () => {
         const daysArray = [];
-
         for (let i = 0; i < firstDayOfMonth; i++) {
             daysArray.push(<div key={`empty${i}`} className="empty-day"></div>);
         }
-
         for (let day = 1; day <= daysInMonth; day++) {
             daysArray.push(
                 <div
                     onClick={(e) => {
-                        console.log(date)
                         const yearValue = monthRef.current.textContent.slice(-5)
                         const monthValue = monthRef.current.textContent.slice(0, -6)
                         const dayValue = e.target.textContent
-
                         setDate(prevDate => ({
                             ...prevDate,
                             year: yearValue,
@@ -76,7 +67,6 @@ const Calendar = () => {
                             name: isLogged ? JSON.parse(Cookies.get("userData")).username : prevDate.name,
                             email: isLogged ? JSON.parse(Cookies.get("userData")).email : prevDate.email
                         }));
-
                     }}
                     key={day}
                     className={`day ${selectedDate.getDate() === day ? 'selected-day' : ''}`}
@@ -91,7 +81,6 @@ const Calendar = () => {
 
     return (
         <div className="wrappCalendar">
-
             <div className="calendar">
                 <div className="header">
                     <button className='changeMonth' onClick={() => setSelectedDate(new Date(year, month - 1, 1))}>&lt;</button>
@@ -127,7 +116,6 @@ const Calendar = () => {
                         <p>{date.day}</p>
                         <p>{date.month}</p>
                         <p>{date.year}</p>
-
                     </div>
                     {isDateFree ? <p style={{ color: 'green' }}>slobodan datum</p> : <p style={{ color: 'red' }}>izaberi neki drugi datum</p>}
                 </div>
@@ -135,8 +123,7 @@ const Calendar = () => {
                     <button ref={buttonRef} onClick={async (e) => {
                         e.target.disabled = true
                         await axios.post(`/api/v1/reservations`, { date })
-                    }} >reserve</button>
-
+                    }} >Reserve</button>
                 </div>
             </div>
         </div>

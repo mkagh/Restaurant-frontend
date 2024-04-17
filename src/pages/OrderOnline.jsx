@@ -5,7 +5,6 @@ import { useGlobalContext } from '../context'
 
 const OrderOnoline = () => {
   const { ordered, removeOrder, total, getTotal, otherErrors, assignotherError } = useGlobalContext()
-
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -14,7 +13,6 @@ const OrderOnoline = () => {
     total: 0
   });
 
-
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     const updatedFormData = {
@@ -22,7 +20,6 @@ const OrderOnoline = () => {
       order: ordered,
       total: total,
     };
-
     try {
       const response = await axios.post('/api/v1/onlineorder', updatedFormData);
       if (response.data.msg) {
@@ -43,7 +40,6 @@ const OrderOnoline = () => {
       };
     });
   };
-
   return (
     <div className='orderOnline' >
       <div className="form">

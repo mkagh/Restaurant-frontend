@@ -8,7 +8,6 @@ import Cookies from 'js-cookie';
 const MemberOrder = () => {
     const { ordered, removeOrder, total, getTotal, clearOrder, clearError } = useGlobalContext()
     const buttonRef = useRef(null)
-
     const { pathname } = useLocation();
 
     useEffect(() => {
@@ -27,7 +26,7 @@ const MemberOrder = () => {
 
     return (
         <div className='memberorder'>
-            <h1 style={{ textAlign: "center" }}>THANK YOU FOR BEING MEMBER</h1>
+            <h1 style={{ textAlign: "center"}}>THANK YOU FOR BEING MEMBER</h1>
             <div className="order">
                 <div className='orderedItems'  >{ordered.length !== 0 && ordered.map((order, index) => {
                     const { price, amount, name } = order
@@ -58,7 +57,7 @@ const MemberOrder = () => {
                     clearOrder()
                     e.target.disabled = true
                     await axios.patch(`/api/v1/${parsedCookie.username}`, dataToSend)
-                }} type='submit'  >Order</button>
+                }} type='submit'>Order</button>
                 <p>YOUR PRICE IS: {total} $</p>
             </div>
             <MainMenu showAmount={true} />

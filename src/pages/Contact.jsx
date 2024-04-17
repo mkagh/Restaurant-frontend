@@ -5,28 +5,22 @@ import { FaViber } from 'react-icons/fa'
 import axios from 'axios'
 import { useGlobalContext } from '../context'
 
-
-
 const Contact = () => {
   const { otherErrors, assignotherError } = useGlobalContext()
-
-
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: '',
   });
-
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-
     try {
       const response = await axios.post('/api/v1/contact', formData);
       if (response.data.msg) {
         assignotherError("to contact us all fields are necessary")
       }
     } catch {
-      console.log("ne valja nesto");
+        console.log("ne valja nesto");
     }
   };
 
@@ -41,7 +35,7 @@ const Contact = () => {
   };
 
   return (
-    <div className='contactUs'  >
+    <div className='contactUs'>
       <div className="title">
         <h1>Contact</h1>
       </div>
@@ -100,7 +94,6 @@ const Contact = () => {
           </form>
         </div>
       </div>
-
     </div>
   )
 }

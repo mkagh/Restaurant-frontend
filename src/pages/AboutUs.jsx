@@ -1,8 +1,6 @@
 import React from 'react'
 
 const AboutUs = () => {
-
-
     return (
         <div className='about'>
             <div className="title">

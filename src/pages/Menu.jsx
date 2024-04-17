@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 
 const Menu = ({ items, categories, filterAllItems, searchFilter }) => {
     let searchValue = useRef("")
-
     return (
         <div className='menuWrapper'>
             <div className="search">
@@ -35,7 +34,7 @@ const Menu = ({ items, categories, filterAllItems, searchFilter }) => {
                         return <div key={id} className='oneItem'>
                             <div className="left-side">
                                 <h3>{name}</h3>
-                                <Link to={`/oneitem/${name}`}> <button>details</button></Link>
+                                <button> <Link to={`/oneitem/${name}`}> details</Link></button>
                             </div>
                             <p>{price}$</p>
                         </div>

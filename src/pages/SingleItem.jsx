@@ -1,7 +1,6 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 
-
 const SingleItem = ({ items }) => {
     const { id } = useParams()
     const singleItem = items.filter((item) => {
@@ -13,7 +12,7 @@ const SingleItem = ({ items }) => {
             backgroundImage: `url(${image})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
-        }} className='singleItem'>
+            }} className='singleItem'>
             <div className="restOfData">
                 <h1>{name}</h1>
                 <h2>category:{category}</h2>
@@ -22,7 +21,6 @@ const SingleItem = ({ items }) => {
                 <div>{ingredients.map((ingredient) => {
                     return <p>{ingredient}</p>
                 })}</div>
-
             </div>
         </div>
     )

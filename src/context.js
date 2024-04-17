@@ -17,7 +17,6 @@ const initialState = {
     otherErrors: ""
 }
 
-
 const AppProvider = ({ children }) => {
     const [state, dispatch] = useReducer(reducer, initialState)
 
@@ -45,43 +44,27 @@ const AppProvider = ({ children }) => {
     }
     const Decrease = (id) => {
         dispatch({ type: 'DECREASE', payload: id })
-
-
     }
     const clearOrder = () => {
         dispatch({ type: 'CLEAR_ORDER' })
-
-
     }
     const NewOrder = (id) => {
         dispatch({ type: 'ADD_ORDER', payload: id })
-
-
     }
     const removeOrder = (id) => {
         dispatch({ type: 'REMOVE_ORDER', payload: id })
-
-
     }
     const getTotal = () => {
         dispatch({ type: 'TOTAL' })
-
-
     }
     const assignotherError = (err) => {
         dispatch({ type: 'ASSIGN_ERROR', payload: err })
-
-
     }
     const clearError = (err) => {
         dispatch({ type: 'CLEAR_ERROR' })
-
-
     }
     const assignSignError = (err) => {
         dispatch({ type: 'ASSIGN_SIGN_ERROR', payload: err })
-
-
     }
     return (
         <AppContext.Provider value={{
